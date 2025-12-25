@@ -27,12 +27,14 @@
   
   <main class="card">
     <h1 class="greeting"><span class="heart">❤️</span> Frohe Weihnachten Schatzilein <span class="heart">❤️</span></h1>
+    <p class="subtitle">Finde heraus was wir am 21ten / 22ten Februar zusammen machen, indem du auf die Geschenke klickst 🎁</p>
     
     <div class="path-container">
       <!-- Step 1 - Left -->
       <div class="path-row row-left">
         <div class="path-step" data-step="1">
           <div class="present-wrapper">
+            <div class="step-number">1</div>
             <div class="present" onclick="openPresent(1)">🎁</div>
             <div class="sparkles">✨</div>
           </div>
@@ -40,15 +42,16 @@
             <div class="image-container">
               <img src="assets/ski.PNG" alt="Skifahren">
             </div>
-            <p class="gift-text">🎿 Samstag: Skifahren oder andere outdoor Aktivität</p>
+            <p class="gift-text">🎿 Samstag: Skifahren oder was auch immer wir machen möchten</p>
           </div>
         </div>
         <div class="path-decor">🌲</div>
       </div>
       
       <div class="winding-path path-right">
+        <div class="trail-marker">⛷️</div>
         <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-          <path d="M0,30 Q100,60 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M0,30 Q100,60 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="8,4"/>
         </svg>
       </div>
       
@@ -57,6 +60,7 @@
         <div class="path-decor">⛰️</div>
         <div class="path-step" data-step="2">
           <div class="present-wrapper">
+            <div class="step-number">2</div>
             <div class="present" onclick="openPresent(2)">🎁</div>
             <div class="sparkles">✨</div>
           </div>
@@ -64,14 +68,15 @@
             <div class="image-container">
               <img src="assets/sauna.PNG" alt="Sauna">
             </div>
-            <p class="gift-text">🧖‍♀️ Samstag Abend Part 1: Im Wellness entspannen</p>
+            <p class="gift-text">🧖‍♀️ Samstag Abend Part 1: Im Wellness des Hotels entspannen</p>
           </div>
         </div>
       </div>
       
       <div class="winding-path path-left">
+        <div class="trail-marker">🧖</div>
         <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-          <path d="M0,30 Q100,0 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M0,30 Q100,0 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="8,4"/>
         </svg>
       </div>
       
@@ -79,6 +84,7 @@
       <div class="path-row row-left">
         <div class="path-step" data-step="3">
           <div class="present-wrapper">
+            <div class="step-number">3</div>
             <div class="present" onclick="openPresent(3)">🎁</div>
             <div class="sparkles">✨</div>
           </div>
@@ -86,15 +92,16 @@
             <div class="image-container">
               <img src="assets/dinner.PNG" alt="Abendessen">
             </div>
-            <p class="gift-text">🍽️ Samstag Abend Part 2: Lecker abendessen</p>
+            <p class="gift-text">🍽️ Samstag Abend Part 2: Lecker Abendessen</p>
           </div>
         </div>
         <div class="path-decor">🎄</div>
       </div>
       
       <div class="winding-path path-right">
+        <div class="trail-marker">🍷</div>
         <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-          <path d="M0,30 Q100,60 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M0,30 Q100,60 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="8,4"/>
         </svg>
       </div>
       
@@ -103,6 +110,7 @@
         <div class="path-decor">🏔️</div>
         <div class="path-step" data-step="4">
           <div class="present-wrapper">
+            <div class="step-number">4</div>
             <div class="present" onclick="openPresent(4)">🎁</div>
             <div class="sparkles">✨</div>
           </div>
@@ -116,16 +124,19 @@
       </div>
       
       <div class="winding-path path-left">
+        <div class="trail-marker">😴</div>
         <svg viewBox="0 0 200 60" preserveAspectRatio="none">
-          <path d="M0,30 Q100,0 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M0,30 Q100,0 200,30" stroke="#c41e3a" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="8,4"/>
         </svg>
       </div>
       
-      <!-- Step 5 - Center -->
+      <!-- Step 5 - Center (Summit!) -->
       <div class="path-row row-center">
         <div class="path-decor left-decor">🌲</div>
         <div class="path-step final-step" data-step="5">
+          <div class="summit-flag">🚩</div>
           <div class="present-wrapper">
+            <div class="step-number step-number-final">5</div>
             <div class="present present-final" onclick="openPresent(5)">🎁</div>
             <div class="sparkles">✨</div>
           </div>
@@ -133,7 +144,7 @@
             <div class="image-container">
               <img src="assets/breakfast.PNG" alt="Frühstück">
             </div>
-            <p class="gift-text">🥐 Sonntag Früh: Lecker Frühstück</p>
+            <p class="gift-text">🥐 Sonntag Früh: Lecker Frühstück im Hotel</p>
           </div>
         </div>
         <div class="path-decor right-decor">🌲</div>

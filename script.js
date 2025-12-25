@@ -1,3 +1,47 @@
+// Image URLs for each present
+const images = [
+  "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=300&h=300&fit=crop",
+  "https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=300&h=300&fit=crop",
+  "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?w=300&h=300&fit=crop",
+  "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=300&h=300&fit=crop"
+];
+
+// Track which presents have been opened
+const openedPresents = new Set();
+
+// Open present and show image
+function openPresent(stepNumber) {
+  const imageContainer = document.getElementById(`image-${stepNumber}`);
+  const present = event.target;
+  
+  // If already opened, do nothing
+  if (openedPresents.has(stepNumber)) {
+    return;
+  }
+  
+  // Mark as opened
+  openedPresents.add(stepNumber);
+  
+  // Hide the present emoji
+  present.style.opacity = '0';
+  present.style.transform = 'scale(0)';
+  
+  // Show the image
+  const img = document.createElement('img');
+  img.src = images[stepNumber - 1];
+  img.alt = `Present ${stepNumber}`;
+  img.className = 'revealed-image';
+  
+  imageContainer.appendChild(img);
+  imageContainer.style.display = 'block';
+  
+  // Animate image appearance
+  setTimeout(() => {
+    img.style.opacity = '1';
+    img.style.transform = 'scale(1)';
+  }, 10);
+}
+
 // Create snowflakes animation
 function createSnow() {
   const snowContainer = document.getElementById('snow');
@@ -31,20 +75,5 @@ function createSnow() {
   document.head.appendChild(style);
 }
 
-// Show surprise message
-function showMessage() {
-  const messages = [
-    "🎄 Merry Christmas! 🎄",
-    "🎅 Ho Ho Ho! 🎅",
-    "❄️ Happy Holidays! ❄️",
-    "🎁 Wishing you joy! 🎁",
-    "✨ May your days be merry and bright! ✨"
-  ];
-  
-  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-  alert(randomMessage);
-}
-
 // Initialize snow when page loads
 document.addEventListener('DOMContentLoaded', createSnow);
-
